@@ -1,0 +1,1867 @@
+{
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿Qué es un sistema distribuido según Coulouris?",
+      "opciones": [
+        "Un sistema donde los componentes localizados en computadores conectados en red comunican y coordinan sus acciones mediante paso de mensajes",
+        "Un conjunto de ordenadores conectados a Internet",
+        "Un sistema que distribuye la carga de trabajo entre varios servidores",
+        "Una red de computadoras que comparten recursos"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "conceptos_basicos"
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Qué error hay en el siguiente código de servidor TCP?",
+      "codigo": "ServerSocket server = new ServerSocket(8080);\nSocket client = server.accept();\nInputStream in = client.getInputStream();\nString data = in.readLine();\nclient.close();",
+      "opciones": [
+        "El puerto 8080 no es válido",
+        "No se puede usar readLine() directamente sobre InputStream",
+        "Falta cerrar el ServerSocket",
+        "El método accept() no devuelve un Socket"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "sockets_tcp"
+    },
+    {
+      "id": 3,
+      "pregunta": "En Java, ¿qué clase se utiliza para crear un servidor TCP?",
+      "opciones": [
+        "TCPServer",
+        "Socket",
+        "ServerSocket",
+        "NetworkServer"
+      ],
+      "respuesta_correcta": 2,
+      "categoria": "sockets_tcp"
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Qué protocolo NO es orientado a conexión?",
+      "opciones": [
+        "TCP",
+        "HTTP",
+        "UDP",
+        "FTP"
+      ],
+      "respuesta_correcta": 2,
+      "categoria": "redes"
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Qué método se usa para obtener el InputStream de un Socket en Java?",
+      "opciones": [
+        "getInputStream()",
+        "readInputStream()",
+        "createInputStream()",
+        "openInputStream()"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "sockets_tcp"
+    },
+    {
+      "id": 6,
+      "pregunta": "¿Qué error hay en el siguiente código de cliente UDP?",
+      "codigo": "DatagramSocket socket = new DatagramSocket();\nbyte[] data = \"Hello\".getBytes();\nInetAddress address = InetAddress.getByName(\"localhost\");\nDatagramPacket packet = new DatagramPacket(data, data.length, address);\nsocket.send(packet);",
+      "opciones": [
+        "Falta especificar el puerto destino",
+        "No se puede usar getBytes() para UDP",
+        "El DatagramSocket necesita un puerto",
+        "InetAddress.getByName() no acepta \"localhost\""
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "sockets_udp"
+    },
+    {
+      "id": 7,
+      "pregunta": "En un servidor multihilo, ¿qué problema puede causar el siguiente código?",
+      "codigo": "public static List<String> clientList = new ArrayList<>();\n//En el thread del cliente:\nclientList.add(clientName);",
+      "opciones": [
+        "ArrayList no puede usarse en threads",
+        "La lista debería ser final",
+        "No es thread-safe, podría causar problemas de concurrencia",
+        "clientName podría ser null"
+      ],
+      "respuesta_correcta": 2,
+      "categoria": "concurrencia"
+    },
+    {
+      "id": 8,
+      "pregunta": "¿Qué método de la clase Socket permite establecer un timeout para las operaciones de lectura?",
+      "opciones": [
+        "setTimeout(int milliseconds)",
+        "setReadTimeout(int milliseconds)",
+        "setSoTimeout(int milliseconds)",
+        "setSocketTimeout(int milliseconds)"
+      ],
+      "respuesta_correcta": 2,
+      "categoria": "sockets_tcp"
+    },
+    {
+      "id": 9,
+      "pregunta": "En JAXB, ¿qué anotación se usa para especificar el elemento raíz de XML?",
+      "opciones": [
+        "@XMLRoot",
+        "@XmlRootElement",
+        "@RootElement",
+        "@XMLElement"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "xml"
+    },
+    {
+      "id": 10,
+      "pregunta": "¿Qué problema presenta el siguiente código de servidor?",
+      "codigo": "ServerSocket server = new ServerSocket(8080);\nwhile(true) {\n  Socket client = server.accept();\n  handleClient(client);\n}",
+      "opciones": [
+        "El puerto 8080 está reservado",
+        "No se maneja el cierre del servidor",
+        "El servidor es secuencial y bloqueará en cada cliente",
+        "El método handleClient no existe en Java"
+      ],
+      "respuesta_correcta": 2,
+      "categoria": "sockets_tcp"
+    },
+    {
+      "id": 11,
+      "pregunta": "¿Qué clase se utiliza para implementar un pool de threads en Java?",
+      "opciones": [
+        "ThreadPool",
+        "ExecutorService",
+        "ThreadGroup",
+        "ThreadManager"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "concurrencia"
+    },
+    {
+      "id": 12,
+      "pregunta": "En un servicio REST, ¿qué método HTTP se debe usar para actualizar un recurso existente?",
+      "opciones": [
+        "POST",
+        "PUT",
+        "PATCH",
+        "UPDATE"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "servicios_web"
+    },
+    {
+      "id": 13,
+      "pregunta": "¿Qué error hay en el siguiente código de manejo de SSL?",
+      "codigo": "SSLServerSocket server = (SSLServerSocket) SSLServerSocketFactory.getDefault().createServerSocket(443);\nSSLSocket client = (SSLSocket) server.accept();\nInputStream in = client.getInputStream();",
+      "opciones": [
+        "No se ha configurado el keystore",
+        "El puerto 443 requiere privilegios de root/administrador",
+        "SSLServerSocket no puede castearse directamente",
+        "El método getDefault() está deprecado"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "seguridad"
+    },
+    {
+      "id": 14,
+      "pregunta": "¿Qué interfaz debe implementar una clase para poder ser serializada en Java?",
+      "opciones": [
+        "Serialized",
+        "Serializable",
+        "Serializator",
+        "Serial"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "serializacion"
+    },
+    {
+      "id": 15,
+      "pregunta": "En un sistema distribuido, ¿qué significa el término 'transparencia de localización'?",
+      "opciones": [
+        "Los usuarios no pueden ver el código fuente",
+        "Los recursos pueden accederse sin conocer su ubicación física",
+        "El sistema es invisible para los usuarios",
+        "Los datos están encriptados"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "conceptos_basicos"
+    },
+    {
+      "id": 16,
+      "pregunta": "¿Qué problema puede causar el siguiente código en un servidor multihilo?",
+      "codigo": "public class ClientHandler implements Runnable {\n  private static BufferedReader in;\n  private static PrintWriter out;\n  public void run() {\n    // manejo del cliente\n  }\n}",
+      "opciones": [
+        "Runnable no es apropiado para sockets",
+        "Los streams deberían ser final",
+        "Los streams static son compartidos entre todos los threads",
+        "Falta el constructor de la clase"
+      ],
+      "respuesta_correcta": 2,
+      "categoria": "concurrencia"
+    },
+    {
+      "id": 17,
+      "pregunta": "¿Qué método de URLConnection permite enviar datos POST a un servidor web?",
+      "opciones": [
+        "setDoOutput(true)",
+        "setPostMethod()",
+        "enablePost()",
+        "setMethod(\"POST\")"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "networking"
+    },
+    {
+      "id": 18,
+      "pregunta": "En SOAP, ¿qué elemento XML contiene la información real del mensaje?",
+      "opciones": [
+        "<soap:header>",
+        "<soap:body>",
+        "<soap:envelope>",
+        "<soap:message>"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "servicios_web"
+    },
+    {
+      "id": 19,
+      "pregunta": "¿Qué excepción se debe manejar al crear un ServerSocket?",
+      "opciones": [
+        "SocketException",
+        "IOException",
+        "ServerException",
+        "BindException"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "sockets_tcp"
+    },
+    {
+      "id": 20,
+      "pregunta": "¿Qué método NO pertenece a la interfaz ExecutorService?",
+      "opciones": [
+        "submit()",
+        "execute()",
+        "shutdown()",
+        "start()"
+      ],
+      "respuesta_correcta": 3,
+      "categoria": "concurrencia"
+    },
+    {
+      "id": 21,
+      "pregunta": "¿Qué error hay en el siguiente código de cliente TCP?",
+      "codigo": "Socket socket = new Socket(\"localhost\", 8080);\nPrintWriter out = new PrintWriter(socket.getOutputStream());\nout.println(\"Hello\");\nsocket.close();",
+      "opciones": [
+        "Falta flush() después del println",
+        "No se puede usar PrintWriter con sockets",
+        "El constructor de Socket puede lanzar una excepción",
+        "localhost no es una dirección válida"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "sockets_tcp"
+    },
+    {
+      "id": 22,
+      "pregunta": "En un servicio web REST, ¿qué código de estado HTTP indica que se ha creado un nuevo recurso correctamente?",
+      "opciones": [
+        "200 OK",
+        "201 Created",
+        "204 No Content",
+        "202 Accepted"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "servicios_web"
+    },
+    {
+      "id": 23,
+      "pregunta": "¿Qué clase se utiliza para obtener la dirección IP de un host en Java?",
+      "opciones": [
+        "IPAddress",
+        "HostAddress",
+        "InetAddress",
+        "NetworkAddress"
+      ],
+      "respuesta_correcta": 2,
+      "categoria": "networking"
+    },
+    {
+      "id": 24,
+      "pregunta": "¿Qué problema presenta el siguiente código de manejo de conexiones?",
+      "codigo": "try {\n  Socket socket = new Socket(host, port);\n  handleConnection(socket);\n} catch(IOException e) {\n  e.printStackTrace();\n}",
+      "opciones": [
+        "No se maneja la excepción correctamente",
+        "Falta cerrar el socket",
+        "El método handleConnection no existe",
+        "El host y port deberían ser final"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "sockets_tcp"
+    },
+    {
+      "id": 25,
+      "pregunta": "¿Qué interfaz define los métodos básicos para una cola thread-safe en Java?",
+      "opciones": [
+        "ThreadQueue",
+        "SynchronizedQueue",
+        "BlockingQueue",
+        "ConcurrentQueue"
+      ],
+      "respuesta_correcta": 2,
+      "categoria": "concurrencia"
+    },
+    {
+      "id": 26,
+      "pregunta": "¿Qué problema presenta el siguiente código de un servidor UDP?",
+      "codigo": "DatagramSocket server = new DatagramSocket(9090);\nbyte[] buffer = new byte[1024];\nwhile(true) {\n  DatagramPacket packet = new DatagramPacket(buffer, buffer.length);\n  server.receive(packet);\n  String message = new String(packet.getData());\n  System.out.println(message);\n}",
+      "opciones": [
+        "El puerto 9090 no es válido para UDP",
+        "No se usa la longitud real del paquete recibido",
+        "El buffer debería reiniciarse en cada iteración",
+        "DatagramSocket no puede usarse en un bucle infinito"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "sockets_udp"
+    },
+    {
+      "id": 27,
+      "pregunta": "En JAXB, ¿qué anotación se usa para especificar que un campo debe ser un atributo XML?",
+      "opciones": [
+        "@XmlAttribute",
+        "@Attribute",
+        "@XMLAttr",
+        "@XmlField"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "xml"
+    },
+    {
+      "id": 28,
+      "pregunta": "¿Qué método de la clase Socket permite comprobar si hay datos disponibles para leer?",
+      "opciones": [
+        "hasData()",
+        "isDataAvailable()",
+        "getInputStream().available()",
+        "ready()"
+      ],
+      "respuesta_correcta": 2,
+      "categoria": "sockets_tcp"
+    },
+    {
+      "id": 29,
+      "pregunta": "¿Qué error hay en el siguiente código de manejo de threads?",
+      "codigo": "Thread t = new Thread(new Runnable() {\n  public void run() {\n    while(true) {\n      if(shouldStop) break;\n      processData();\n    }\n  }\n});",
+      "opciones": [
+        "La variable shouldStop debería ser volatile",
+        "No se puede usar break en un thread",
+        "Runnable no puede contener un bucle infinito",
+        "processData() no es un método válido"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "concurrencia"
+    },
+    {
+      "id": 30,
+      "pregunta": "En un servicio REST, ¿qué método HTTP se usa para obtener una parte específica de un recurso?",
+      "opciones": [
+        "GET",
+        "POST",
+        "PATCH",
+        "PUT"
+      ],
+      "respuesta_correcta": 2,
+      "categoria": "servicios_web"
+    },
+    {
+      "id": 31,
+      "pregunta": "¿Qué clase se utiliza para crear un pool de threads con un número fijo de threads?",
+      "opciones": [
+        "Executors.newFixedThreadPool()",
+        "Executors.newThreadPool()",
+        "ThreadPool.fixed()",
+        "ThreadPool.newFixed()"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "concurrencia"
+    },
+    {
+      "id": 32,
+      "pregunta": "¿Qué problema presenta el siguiente código de serialización?",
+      "codigo": "class User implements Serializable {\n  private String username;\n  private transient String password;\n  private Connection dbConnection;\n}",
+      "opciones": [
+        "La clase Connection no es serializable",
+        "No se puede usar transient con String",
+        "Falta el serialVersionUID",
+        "username debería ser final"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "serializacion"
+    },
+    {
+      "id": 33,
+      "pregunta": "¿Qué método se usa para esperar a que todos los threads de un ExecutorService terminen?",
+      "opciones": [
+        "wait()",
+        "join()",
+        "awaitTermination()",
+        "waitForCompletion()"
+      ],
+      "respuesta_correcta": 2,
+      "categoria": "concurrencia"
+    },
+    {
+      "id": 34,
+      "pregunta": "En un servidor SSL, ¿qué almacén de claves contiene el certificado del servidor?",
+      "opciones": [
+        "truststore",
+        "keystore",
+        "certstore",
+        "sslstore"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "seguridad"
+    },
+    {
+      "id": 35,
+      "pregunta": "¿Qué error hay en el siguiente código de cliente TCP?",
+      "codigo": "try(Socket socket = new Socket(host, port)) {\n  ObjectOutputStream out = new ObjectOutputStream(socket.getOutputStream());\n  ObjectInputStream in = new ObjectInputStream(socket.getInputStream());\n  out.writeObject(data);\n  Object response = in.readObject();\n}",
+      "opciones": [
+        "Falta cerrar los streams",
+        "No se puede usar try-with-resources con Socket",
+        "Falta manejar ClassNotFoundException",
+        "ObjectInputStream no es compatible con sockets"
+      ],
+      "respuesta_correcta": 2,
+      "categoria": "sockets_tcp"
+    },
+    {
+      "id": 36,
+      "pregunta": "¿Qué interfaz define los métodos para un servicio web JAX-WS?",
+      "opciones": [
+        "@WebService",
+        "@SOAPService",
+        "@Service",
+        "@WSService"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "servicios_web"
+    },
+    {
+      "id": 37,
+      "pregunta": "¿Qué método de InetAddress devuelve la dirección IP como un array de bytes?",
+      "opciones": [
+        "getBytes()",
+        "getAddress()",
+        "getIPAddress()",
+        "toByteArray()"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "networking"
+    },
+    {
+      "id": 38,
+      "pregunta": "¿Qué problema presenta el siguiente código de un servidor multihilo?",
+      "codigo": "ExecutorService pool = Executors.newFixedThreadPool(10);\nwhile(true) {\n  Socket client = server.accept();\n  pool.execute(new ClientHandler(client));\n}",
+      "opciones": [
+        "El pool debería cerrarse en algún momento",
+        "newFixedThreadPool no acepta el valor 10",
+        "ClientHandler debe ser static",
+        "No se puede usar ExecutorService con sockets"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "concurrencia"
+    },
+    {
+      "id": 39,
+      "pregunta": "En SOAP, ¿qué elemento describe la interfaz del servicio web?",
+      "opciones": [
+        "SOAP",
+        "WSDL",
+        "UDDI",
+        "XML"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "servicios_web"
+    },
+    {
+      "id": 40,
+      "pregunta": "¿Qué método de URLConnection debe llamarse antes de getInputStream() si se van a establecer propiedades?",
+      "opciones": [
+        "connect()",
+        "open()",
+        "start()",
+        "init()"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "networking"
+    },
+    {
+      "id": 41,
+      "pregunta": "¿Qué error hay en el siguiente código de manejo de datagramas?",
+      "codigo": "DatagramSocket socket = new DatagramSocket();\nString message = \"Hello\";\nbyte[] data = message.getBytes();\nDatagramPacket packet = new DatagramPacket(data, data.length);\nsocket.send(packet);",
+      "opciones": [
+        "Falta la dirección de destino",
+        "No se puede enviar String por UDP",
+        "El DatagramSocket necesita un puerto",
+        "getBytes() no es seguro para UDP"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "sockets_udp"
+    },
+    {
+      "id": 42,
+      "pregunta": "¿Qué interfaz debe implementar una clase para ser usada con un ExecutorService?",
+      "opciones": [
+        "Executable",
+        "Runnable",
+        "Callable",
+        "Tanto Runnable como Callable son válidas"
+      ],
+      "respuesta_correcta": 3,
+      "categoria": "concurrencia"
+    },
+    {
+      "id": 43,
+      "pregunta": "En un servicio REST, ¿qué header HTTP se usa para especificar el tipo de contenido de la respuesta?",
+      "opciones": [
+        "Content-Type",
+        "Response-Type",
+        "Media-Type",
+        "Type"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "servicios_web"
+    },
+    {
+      "id": 44,
+      "pregunta": "¿Qué problema presenta el siguiente código de serialización?",
+      "codigo": "ObjectOutputStream out = new ObjectOutputStream(socket.getOutputStream());\nout.writeObject(object1);\nout.writeObject(object1); // mismo objeto",
+      "opciones": [
+        "No se puede serializar el mismo objeto dos veces",
+        "El segundo writeObject enviará una referencia, no el objeto completo",
+        "Falta flush() después de cada writeObject",
+        "ObjectOutputStream no puede usarse con sockets"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "serializacion"
+    },
+    {
+      "id": 45,
+      "pregunta": "¿Qué método se usa para obtener la dirección del cliente en un DatagramPacket recibido?",
+      "opciones": [
+        "getClientAddress()",
+        "getAddress()",
+        "getSenderAddress()",
+        "getRemoteAddress()"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "sockets_udp"
+    },
+    {
+      "id": 46,
+      "pregunta": "En SSL, ¿qué almacén contiene los certificados de las CAs en las que confía el cliente?",
+      "opciones": [
+        "keystore",
+        "truststore",
+        "castore",
+        "sslstore"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "seguridad"
+    },
+    {
+      "id": 47,
+      "pregunta": "¿Qué error hay en el siguiente código de un servidor web básico?",
+      "codigo": "ServerSocket server = new ServerSocket(80);\nwhile(true) {\n  Socket client = server.accept();\n  BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));\n  String request = in.readLine();\n  if(request.startsWith(\"GET\")) {\n    // procesar GET\n  }\n}",
+      "opciones": [
+        "El puerto 80 requiere privilegios de administrador",
+        "No se cierra el BufferedReader ni el Socket",
+        "readLine() puede devolver null",
+        "Todas las anteriores"
+      ],
+      "respuesta_correcta": 3,
+      "categoria": "sockets_tcp"
+    },
+    {
+      "id": 48,
+      "pregunta": "¿Qué método de la clase Thread interrumpe la ejecución de un thread?",
+      "opciones": [
+        "stop()",
+        "kill()",
+        "interrupt()",
+        "terminate()"
+      ],
+      "respuesta_correcta": 2,
+      "categoria": "concurrencia"
+    },
+    {
+      "id": 49,
+      "pregunta": "En JAXB, ¿qué anotación se usa para especificar el nombre de un elemento XML?",
+      "opciones": [
+        "@XmlElement",
+        "@Element",
+        "@XmlName",
+        "@Name"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "xml"
+    },
+    {
+      "id": 50,
+      "pregunta": "¿Qué problema presenta el siguiente código de un cliente UDP?",
+      "codigo": "DatagramSocket socket = new DatagramSocket();\nInetAddress address = InetAddress.getByName(\"localhost\");\nwhile(true) {\n  String message = scanner.nextLine();\n  byte[] data = message.getBytes();\n  DatagramPacket packet = new DatagramPacket(data, data.length, address, 9090);\n  socket.send(packet);\n}",
+      "opciones": [
+        "No se maneja la desconexión del servidor",
+        "El scanner podría lanzar NoSuchElementException",
+        "No se cierra el socket",
+        "Todas las anteriores"
+      ],
+      "respuesta_correcta": 3,
+      "categoria": "sockets_udp"
+    },
+    {
+      "id": 51,
+      "pregunta": "¿Qué error hay en el siguiente código de un servidor multihilo?",
+      "codigo": "class Server {\n  private static PrintWriter out;\n  class ClientHandler implements Runnable {\n    public void run() {\n      out = new PrintWriter(client.getOutputStream());\n      out.println(\"Welcome\");\n    }\n  }\n}",
+      "opciones": [
+        "No se puede crear un PrintWriter en un Runnable",
+        "El PrintWriter static es compartido entre todos los clientes",
+        "Falta el flush() después del println",
+        "No se puede acceder a client desde el inner class"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "concurrencia"
+    },
+    {
+      "id": 52,
+      "pregunta": "En REST, ¿qué significa HATEOAS?",
+      "opciones": [
+        "HTTP And Transfer Engine Over Application Server",
+        "Hypertext As The Engine Of Application State",
+        "High Availability Transfer Engine Over Application State",
+        "Hypertext Application Transfer Engine Over Application Server"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "servicios_web"
+    },
+    {
+      "id": 53,
+      "pregunta": "¿Qué método de SSLContext se usa para inicializar con los almacenes de claves?",
+      "opciones": [
+        "initialize()",
+        "init()",
+        "start()",
+        "setup()"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "seguridad"
+    },
+    {
+      "id": 54,
+      "pregunta": "¿Qué problema presenta el siguiente código de serialización?",
+      "codigo": "class User implements Serializable {\n  private String name;\n  private transient Password pwd;\n  private void writeObject(ObjectOutputStream out) throws IOException {\n    out.defaultWriteObject();\n    out.writeObject(pwd.getEncrypted());\n  }\n}",
+      "opciones": [
+        "No se puede serializar un objeto transient",
+        "Falta el readObject correspondiente",
+        "defaultWriteObject() no puede usarse con campos transient",
+        "writeObject debe ser público"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "serializacion"
+    },
+    {
+      "id": 55,
+      "pregunta": "¿Qué interfaz define los métodos para un servicio JAX-RS?",
+      "opciones": [
+        "@RestService",
+        "@WebService",
+        "@Path",
+        "@Service"
+      ],
+      "respuesta_correcta": 2,
+      "categoria": "servicios_web"
+    },
+    {
+      "id": 56,
+      "pregunta": "¿Qué error hay en el siguiente código de manejo de timeout en sockets?",
+      "codigo": "Socket socket = new Socket();\nsocket.connect(new InetSocketAddress(host, port), 5000);\nif(!socket.isConnected()) {\n  System.out.println(\"Connection timeout\");\n}",
+      "opciones": [
+        "El timeout debería especificarse en segundos",
+        "isConnected() no indica si la conexión fue exitosa",
+        "connect() puede lanzar una excepción que no se maneja",
+        "No se puede usar InetSocketAddress con timeout"
+      ],
+      "respuesta_correcta": 2,
+      "categoria": "sockets_tcp"
+    },
+    {
+      "id": 57,
+      "pregunta": "En un ExecutorService, ¿qué método se usa para enviar una tarea que devuelve un resultado?",
+      "opciones": [
+        "execute()",
+        "submit()",
+        "run()",
+        "invoke()"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "concurrencia"
+    },
+    {
+      "id": 58,
+      "pregunta": "¿Qué anotación de JAXB se usa para especificar el orden de los elementos XML?",
+      "opciones": [
+        "@XmlOrder",
+        "@XmlSequence",
+        "@XmlType(propOrder={})",
+        "@Order"
+      ],
+      "respuesta_correcta": 2,
+      "categoria": "xml"
+    },
+    {
+      "id": 59,
+      "pregunta": "¿Qué problema presenta el siguiente código de un servidor UDP?",
+      "codigo": "DatagramSocket server = new DatagramSocket(9090);\nwhile(true) {\n  byte[] buffer = new byte[1024];\n  DatagramPacket packet = new DatagramPacket(buffer, buffer.length);\n  server.receive(packet);\n  new Thread(() -> processPacket(packet)).start();\n}",
+      "opciones": [
+        "No se puede procesar UDP en threads separados",
+        "El buffer es compartido entre todos los threads",
+        "receive() no es thread-safe",
+        "El puerto 9090 no es válido para UDP"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "sockets_udp"
+    },
+    {
+      "id": 60,
+      "pregunta": "En SSL, ¿qué tipo de autenticación requiere certificados tanto en cliente como en servidor?",
+      "opciones": [
+        "Autenticación simple",
+        "Autenticación mutua",
+        "Autenticación bidireccional",
+        "Autenticación dual"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "seguridad"
+    },
+    {
+      "id": 61,
+      "pregunta": "¿Qué error hay en el siguiente código de un cliente TCP?",
+      "codigo": "Socket socket = null;\ntry {\n  socket = new Socket(host, port);\n  handleConnection(socket);\n} finally {\n  socket.close();\n}",
+      "opciones": [
+        "finally no es necesario con sockets",
+        "close() puede lanzar una excepción",
+        "socket podría ser null al llamar a close()",
+        "handleConnection() debería estar en el finally"
+      ],
+      "respuesta_correcta": 2,
+      "categoria": "sockets_tcp"
+    },
+    {
+      "id": 62,
+      "pregunta": "¿Qué método de la clase Thread permite esperar a que otro thread termine?",
+      "opciones": [
+        "wait()",
+        "join()",
+        "sleep()",
+        "await()"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "concurrencia"
+    },
+    {
+      "id": 63,
+      "pregunta": "En SOAP, ¿qué elemento contiene la información sobre errores?",
+      "opciones": [
+        "<error>",
+        "<fault>",
+        "<exception>",
+        "<failure>"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "servicios_web"
+    },
+    {
+      "id": 64,
+      "pregunta": "¿Qué problema presenta el siguiente código de serialización?",
+      "codigo": "ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(\"data.ser\"));\nout.writeObject(object1);\nout.writeObject(object2);\nout.close();",
+      "opciones": [
+        "No se puede serializar más de un objeto al mismo archivo",
+        "Falta flush() antes del close()",
+        "No se maneja la excepción de FileOutputStream",
+        "close() podría no ejecutarse si hay una excepción"
+      ],
+      "respuesta_correcta": 3,
+      "categoria": "serializacion"
+    },
+    {
+      "id": 65,
+      "pregunta": "¿Qué método de InetAddress verifica si una dirección es alcanzable?",
+      "opciones": [
+        "ping()",
+        "isReachable()",
+        "isAccessible()",
+        "canConnect()"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "networking"
+    },
+    {
+      "id": 66,
+      "pregunta": "En REST, ¿qué código de estado HTTP indica que el recurso solicitado ya no existe?",
+      "opciones": [
+        "404 Not Found",
+        "410 Gone",
+        "400 Bad Request",
+        "204 No Content"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "servicios_web"
+    },
+    {
+      "id": 67,
+      "pregunta": "¿Qué error hay en el siguiente código de un pool de threads?",
+      "codigo": "ExecutorService executor = Executors.newFixedThreadPool(10);\nfor(Task task : tasks) {\n  executor.execute(task);\n}\nexecutor.shutdown();",
+      "opciones": [
+        "newFixedThreadPool no puede tener más de 8 threads",
+        "execute() no es el método correcto para enviar tareas",
+        "No se espera a que las tareas terminen antes del shutdown",
+        "shutdown() no es necesario con ExecutorService"
+      ],
+      "respuesta_correcta": 2,
+      "categoria": "concurrencia"
+    },
+    {
+      "id": 68,
+      "pregunta": "¿Qué clase se usa para crear un servidor HTTPS en Java?",
+      "opciones": [
+        "HTTPSServer",
+        "SSLServerSocket",
+        "SecureServerSocket",
+        "HttpsServer"
+      ],
+      "respuesta_correcta": 3,
+      "categoria": "seguridad"
+    },
+    {
+      "id": 69,
+      "pregunta": "¿Qué problema presenta el siguiente código de un cliente UDP?",
+      "codigo": "DatagramSocket socket = new DatagramSocket();\nDatagramPacket packet = new DatagramPacket(new byte[1024], 1024);\nsocket.receive(packet);",
+      "opciones": [
+        "No se puede usar receive() en un cliente UDP",
+        "El tamaño del buffer es demasiado grande",
+        "Falta especificar la dirección del servidor",
+        "receive() es bloqueante y no tiene timeout"
+      ],
+      "respuesta_correcta": 3,
+      "categoria": "sockets_udp"
+    },
+    {
+      "id": 70,
+      "pregunta": "En JAXB, ¿qué método se usa para convertir un objeto Java a XML?",
+      "opciones": [
+        "toXML()",
+        "marshal()",
+        "serialize()",
+        "convert()"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "xml"
+    },
+    {
+      "id": 71,
+      "pregunta": "¿Qué error hay en el siguiente código de manejo de conexiones seguras?",
+      "codigo": "SSLServerSocket server = (SSLServerSocket) SSLServerSocketFactory.getDefault().createServerSocket(443);\nserver.setNeedClientAuth(true);\nSSLSocket client = (SSLSocket) server.accept();",
+      "opciones": [
+        "setNeedClientAuth debe llamarse antes de createServerSocket",
+        "No se configura el protocolo SSL/TLS",
+        "accept() puede devolver un socket no SSL",
+        "El puerto 443 requiere privilegios de administrador"
+      ],
+      "respuesta_correcta": 3,
+      "categoria": "seguridad"
+    },
+    {
+      "id": 72,
+      "pregunta": "En un servicio REST, ¿qué anotación se usa para indicar que un parámetro viene en el path de la URL?",
+      "opciones": [
+        "@QueryParam",
+        "@PathParam",
+        "@URLParam",
+        "@RequestParam"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "servicios_web"
+    },
+    {
+      "id": 73,
+      "pregunta": "¿Qué método de la clase Socket permite obtener la dirección local?",
+      "opciones": [
+        "getLocalAddress()",
+        "getAddress()",
+        "getHostAddress()",
+        "getSocketAddress()"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "sockets_tcp"
+    },
+    {
+      "id": 74,
+      "pregunta": "¿Qué problema presenta el siguiente código de serialización?",
+      "codigo": "class Config implements Serializable {\n  private static final String DEFAULT_PATH = \"/tmp\";\n  private String currentPath = DEFAULT_PATH;\n}",
+      "opciones": [
+        "Las variables static no se serializan",
+        "Falta serialVersionUID",
+        "No se puede serializar paths del sistema",
+        "currentPath debería ser final"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "serializacion"
+    },
+    {
+      "id": 75,
+      "pregunta": "En un ExecutorService, ¿qué método espera a que todas las tareas terminen y luego apaga el executor?",
+      "opciones": [
+        "shutdown()",
+        "shutdownNow()",
+        "awaitTermination()",
+        "terminate()"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "concurrencia"
+    },
+    {
+      "id": 76,
+      "pregunta": "¿Qué error hay en el siguiente código de un servidor TCP multihilo?",
+      "codigo": "ServerSocket server = new ServerSocket(8080);\nwhile(true) {\n  Socket client = server.accept();\n  new Thread(() -> {\n    handleClient(client);\n    client.close();\n  }).start();\n}",
+      "opciones": [
+        "No se puede cerrar el socket en el thread hijo",
+        "handleClient debería ser synchronized",
+        "Falta manejo de excepciones en el thread",
+        "accept() no es thread-safe"
+      ],
+      "respuesta_correcta": 2,
+      "categoria": "sockets_tcp"
+    },
+    {
+      "id": 77,
+      "pregunta": "En JAX-RS, ¿qué anotación se usa para especificar que un método responde a peticiones POST?",
+      "opciones": [
+        "@POST",
+        "@HttpPost",
+        "@PostMapping",
+        "@RequestPost"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "servicios_web"
+    },
+    {
+      "id": 78,
+      "pregunta": "¿Qué problema presenta el siguiente código de manejo de SSL?",
+      "codigo": "SSLContext context = SSLContext.getInstance(\"TLS\");\ncontext.init(null, null, null);\nSSLServerSocketFactory factory = context.getServerSocketFactory();",
+      "opciones": [
+        "getInstance puede lanzar NoSuchAlgorithmException",
+        "No se pueden pasar null a init()",
+        "TLS no es un protocolo válido",
+        "getServerSocketFactory() no es thread-safe"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "seguridad"
+    },
+    {
+      "id": 79,
+      "pregunta": "¿Qué método de DatagramSocket permite establecer el timeout para receive()?",
+      "opciones": [
+        "setTimeout()",
+        "setReceiveTimeout()",
+        "setSoTimeout()",
+        "setDatagramTimeout()"
+      ],
+      "respuesta_correcta": 2,
+      "categoria": "sockets_udp"
+    },
+    {
+      "id": 80,
+      "pregunta": "En JAXB, ¿qué anotación se usa para especificar un namespace XML?",
+      "opciones": [
+        "@XmlNamespace",
+        "@Namespace",
+        "@XmlSchema",
+        "@Schema"
+      ],
+      "respuesta_correcta": 2,
+      "categoria": "xml"
+    },
+    {
+      "id": 81,
+      "pregunta": "¿Qué error hay en el siguiente código de un pool de threads?",
+      "codigo": "ExecutorService executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());\nList<Future<?>> futures = new ArrayList<>();\nfor(Task task : tasks) {\n  futures.add(executor.submit(task));\n}\nexecutor.shutdown();",
+      "opciones": [
+        "No se verifica el resultado de los Future",
+        "newFixedThreadPool no puede usar availableProcessors",
+        "submit() no es adecuado para tareas sin resultado",
+        "La lista de futures debería ser thread-safe"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "concurrencia"
+    },
+    {
+      "id": 82,
+      "pregunta": "En REST, ¿qué método HTTP se debe usar para eliminar un recurso?",
+      "opciones": [
+        "REMOVE",
+        "DELETE",
+        "ERASE",
+        "CLEAR"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "servicios_web"
+    },
+    {
+      "id": 83,
+      "pregunta": "¿Qué problema presenta el siguiente código de serialización?",
+      "codigo": "class User implements Serializable {\n  private String name;\n  private transient Password password;\n  private void readObject(ObjectInputStream in) throws IOException {\n    in.defaultReadObject();\n    password = new Password(in.readUTF());\n  }\n}",
+      "opciones": [
+        "No se puede usar readUTF con campos transient",
+        "Falta ClassNotFoundException en throws",
+        "readObject debe ser público",
+        "defaultReadObject() no es necesario"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "serializacion"
+    },
+    {
+      "id": 84,
+      "pregunta": "¿Qué método de InetAddress devuelve la dirección IP como un array de bytes?",
+      "opciones": [
+        "getBytes()",
+        "getAddress()",
+        "getIPAddress()",
+        "toByteArray()"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "networking"
+    },
+    {
+      "id": 85,
+      "pregunta": "¿Qué error hay en el siguiente código de un cliente UDP?",
+      "codigo": "DatagramSocket socket = new DatagramSocket();\nbyte[] buffer = \"Hello\".getBytes();\nDatagramPacket packet = new DatagramPacket(buffer, buffer.length, InetAddress.getByName(\"localhost\"), 9090);\nsocket.send(packet);\npacket = new DatagramPacket(buffer, buffer.length);\nsocket.receive(packet);",
+      "opciones": [
+        "No se puede reutilizar el mismo buffer",
+        "No se puede reutilizar el mismo DatagramPacket",
+        "receive() necesita la dirección del servidor",
+        "El buffer es demasiado pequeño para receive"
+      ],
+      "respuesta_correcta": 3,
+      "categoria": "sockets_udp"
+    },
+    {
+      "id": 86,
+      "pregunta": "En SSL, ¿qué método se usa para especificar los protocolos permitidos en un SSLSocket?",
+      "opciones": [
+        "setProtocols()",
+        "setEnabledProtocols()",
+        "enableProtocols()",
+        "setAllowedProtocols()"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "seguridad"
+    },
+    {
+      "id": 87,
+      "pregunta": "¿Qué problema presenta el siguiente código de manejo de threads?",
+      "codigo": "public class Worker implements Runnable {\n  private static int counter = 0;\n  public void run() {\n    counter++;\n    System.out.println(\"Count: \" + counter);\n  }\n}",
+      "opciones": [
+        "counter debería ser final",
+        "counter no es thread-safe",
+        "No se puede usar static en Runnable",
+        "System.out no es thread-safe"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "concurrencia"
+    },
+    {
+      "id": 88,
+      "pregunta": "En JAX-RS, ¿qué anotación se usa para especificar el tipo de contenido que produce un método?",
+      "opciones": [
+        "@ContentType",
+        "@Produces",
+        "@ResponseType",
+        "@MediaType"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "servicios_web"
+    },
+    {
+      "id": 89,
+      "pregunta": "¿Qué error hay en el siguiente código de un servidor TCP?",
+      "codigo": "ServerSocket server = new ServerSocket(8080);\nwhile(true) {\n  try {\n    Socket client = server.accept();\n    handleClient(client);\n  } catch(IOException e) {\n    e.printStackTrace();\n  }\n}",
+      "opciones": [
+        "accept() no debería estar en un try-catch",
+        "El servidor continuará después de una excepción",
+        "handleClient debería estar en un try-catch separado",
+        "No se cierra el socket del cliente"
+      ],
+      "respuesta_correcta": 3,
+      "categoria": "sockets_tcp"
+    },
+    {
+      "id": 90,
+      "pregunta": "En JAXB, ¿qué método se usa para convertir XML a un objeto Java?",
+      "opciones": [
+        "fromXML()",
+        "unmarshal()",
+        "deserialize()",
+        "parse()"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "xml"
+    },
+    {
+      "id": 91,
+      "pregunta": "¿Qué problema presenta el siguiente código de serialización?",
+      "codigo": "class Config implements Serializable {\n  private Map<String, String> properties = new HashMap<>();\n  private transient Logger logger;\n  private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {\n    in.defaultReadObject();\n    logger = LoggerFactory.getLogger(Config.class);\n  }\n}",
+      "opciones": [
+        "No se puede serializar un Map",
+        "LoggerFactory podría no estar disponible al deserializar",
+        "Falta writeObject",
+        "defaultReadObject() no es necesario"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "serializacion"
+    },
+    {
+      "id": 92,
+      "pregunta": "En un ExecutorService, ¿qué método envía una tarea y devuelve un Future?",
+      "opciones": [
+        "execute()",
+        "submit()",
+        "invoke()",
+        "run()"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "concurrencia"
+    },
+    {
+      "id": 93,
+      "pregunta": "¿Qué método de Socket permite obtener el puerto remoto?",
+      "opciones": [
+        "getPort()",
+        "getRemotePort()",
+        "getDestinationPort()",
+        "getSocketPort()"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "sockets_tcp"
+    },
+    {
+      "id": 94,
+      "pregunta": "En REST, ¿qué código de estado HTTP indica que la petición fue exitosa pero no hay contenido que devolver?",
+      "opciones": [
+        "200 OK",
+        "204 No Content",
+        "205 Reset Content",
+        "304 Not Modified"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "servicios_web"
+    },
+    {
+      "id": 95,
+      "pregunta": "¿Qué error hay en el siguiente código de un cliente UDP?",
+      "codigo": "DatagramSocket socket = new DatagramSocket();\nwhile(true) {\n  byte[] buffer = new byte[1024];\n  DatagramPacket packet = new DatagramPacket(buffer, buffer.length);\n  socket.receive(packet);\n  String message = new String(packet.getData());\n  System.out.println(message);\n}",
+      "opciones": [
+        "No se especifica la dirección del servidor",
+        "El buffer debería estar fuera del bucle",
+        "No se usa la longitud real del paquete recibido",
+        "receive() debería tener un timeout"
+      ],
+      "respuesta_correcta": 2,
+      "categoria": "sockets_udp"
+    },
+    {
+      "id": 96,
+      "pregunta": "En SSL, ¿qué interfaz define los métodos para un administrador de claves?",
+      "opciones": [
+        "KeyManager",
+        "KeyHandler",
+        "KeyController",
+        "KeyAdmin"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "seguridad"
+    },
+    {
+      "id": 97,
+      "pregunta": "¿Qué problema presenta el siguiente código de manejo de threads?",
+      "codigo": "Thread t = new Thread(() -> {\n  while(!Thread.interrupted()) {\n    try {\n      processData();\n    } catch(InterruptedException e) {}\n  }\n});",
+      "opciones": [
+        "No se puede usar lambda con Thread",
+        "El catch vacío pierde la señal de interrupción",
+        "interrupted() no es thread-safe",
+        "processData() no puede lanzar InterruptedException"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "concurrencia"
+    },
+    {
+      "id": 98,
+      "pregunta": "En JAX-RS, ¿qué anotación se usa para especificar parámetros de consulta en la URL?",
+      "opciones": [
+        "@QueryParam",
+        "@RequestParam",
+        "@URLParam",
+        "@Parameter"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "servicios_web"
+    },
+    {
+      "id": 99,
+      "pregunta": "¿Qué método de ServerSocket permite establecer el tiempo máximo de espera para accept()?",
+      "opciones": [
+        "setTimeout()",
+        "setAcceptTimeout()",
+        "setSoTimeout()",
+        "setServerTimeout()"
+      ],
+      "respuesta_correcta": 2,
+      "categoria": "sockets_tcp"
+    },
+    {
+      "id": 100,
+      "pregunta": "En JAXB, ¿qué anotación se usa para especificar que un campo debe ser ignorado en la serialización XML?",
+      "opciones": [
+        "@XmlIgnore",
+        "@Ignore",
+        "@XmlTransient",
+        "@XmlExclude"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "xml"
+    },
+     {
+      "id": 101,
+      "pregunta": "¿Qué error hay en el siguiente código de un servidor TCP con pool de threads?",
+      "codigo": "ExecutorService pool = Executors.newFixedThreadPool(10);\nServerSocket server = new ServerSocket(8080);\nwhile(true) {\n  Socket client = server.accept();\n  pool.execute(() -> handleClient(client));\n}",
+      "opciones": [
+        "newFixedThreadPool no es adecuado para servidores",
+        "Falta manejo de excepciones en el lambda",
+        "El pool debería cerrarse en algún momento",
+        "execute() no es el método correcto para sockets"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "concurrencia"
+    },
+    {
+      "id": 102,
+      "pregunta": "En REST, ¿qué significa CORS?",
+      "opciones": [
+        "Client Origin Resource Sharing",
+        "Cross Origin Resource Sharing",
+        "Cross Origin Request Service",
+        "Client Origin Request Service"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "servicios_web"
+    },
+    {
+      "id": 103,
+      "pregunta": "¿Qué problema presenta el siguiente código de serialización con herencia?",
+      "codigo": "class Parent implements Serializable {\n  protected String name;\n}\nclass Child extends Parent {\n  private int age;\n  private void writeObject(ObjectOutputStream out) throws IOException {\n    out.writeObject(name);\n    out.writeInt(age);\n  }\n}",
+      "opciones": [
+        "No se puede serializar clases heredadas",
+        "Falta llamar a defaultWriteObject()",
+        "Child debería implementar Serializable",
+        "writeObject no puede acceder a campos protected"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "serializacion"
+    },
+    {
+      "id": 104,
+      "pregunta": "¿Qué método de SSLSocket inicia el handshake SSL explícitamente?",
+      "opciones": [
+        "startHandshake()",
+        "doHandshake()",
+        "beginHandshake()",
+        "initializeHandshake()"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "seguridad"
+    },
+    {
+      "id": 105,
+      "pregunta": "¿Qué error hay en el siguiente código de un cliente UDP multicast?",
+      "codigo": "MulticastSocket socket = new MulticastSocket(4446);\nInetAddress group = InetAddress.getByName(\"230.0.0.1\");\nsocket.joinGroup(group);\nbyte[] buf = new byte[256];\nDatagramPacket packet = new DatagramPacket(buf, buf.length);\nsocket.receive(packet);",
+      "opciones": [
+        "El puerto 4446 no es válido para multicast",
+        "Falta especificar la interfaz de red",
+        "No se puede usar receive() en multicast",
+        "La dirección IP no es válida para multicast"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "sockets_udp"
+    },
+    {
+      "id": 106,
+      "pregunta": "En JAX-RS, ¿qué anotación se usa para especificar que un parámetro viene en el header HTTP?",
+      "opciones": [
+        "@Header",
+        "@HeaderParam",
+        "@RequestHeader",
+        "@HttpHeader"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "servicios_web"
+    },
+    {
+      "id": 107,
+      "pregunta": "¿Qué problema presenta el siguiente código de manejo de threads?",
+      "codigo": "class SharedResource {\n  private int value;\n  public synchronized void increment() { value++; }\n  public int getValue() { return value; }\n}",
+      "opciones": [
+        "increment() no necesita ser synchronized",
+        "getValue() debería ser synchronized",
+        "value debería ser volatile",
+        "No se puede sincronizar métodos de acceso"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "concurrencia"
+    },
+    {
+      "id": 108,
+      "pregunta": "En JAXB, ¿qué anotación se usa para especificar un adaptador XML personalizado?",
+      "opciones": [
+        "@XmlAdapter",
+        "@XmlCustom",
+        "@XmlJavaType",
+        "@Adapter"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "xml"
+    },
+    {
+      "id": 109,
+      "pregunta": "¿Qué error hay en el siguiente código de un servidor TCP?",
+      "codigo": "try(ServerSocket server = new ServerSocket(8080)) {\n  while(true) {\n    try(Socket client = server.accept()) {\n      handleClient(client);\n    }\n  }\n}",
+      "opciones": [
+        "No se puede usar try-with-resources con ServerSocket",
+        "El servidor se cerrará después de cada cliente",
+        "accept() no puede estar en un try-with-resources",
+        "handleClient() debería estar en un try separado"
+      ],
+      "respuesta_correcta": 3,
+      "categoria": "sockets_tcp"
+    },
+    {
+      "id": 110,
+      "pregunta": "En SSL, ¿qué interfaz define los métodos para un administrador de confianza?",
+      "opciones": [
+        "TrustManager",
+        "TrustHandler",
+        "TrustController",
+        "TrustAdmin"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "seguridad"
+    },
+     {
+      "id": 111,
+      "pregunta": "¿Qué error hay en el siguiente código de un cliente TCP?",
+      "codigo": "Socket socket = new Socket(\"localhost\", 8080);\nOutputStream out = socket.getOutputStream();\nout.write(\"Hello\".getBytes());\nsocket.close();",
+      "opciones": [
+        "Falta flush() después de write()",
+        "No se puede usar getOutputStream() en un cliente",
+        "El constructor de Socket puede lanzar una excepción",
+        "localhost no es una dirección válida"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "sockets_tcp"
+    },
+    {
+      "id": 112,
+      "pregunta": "En REST, ¿qué código de estado HTTP indica que el cliente debe autenticarse para obtener la respuesta solicitada?",
+      "opciones": [
+        "401 Unauthorized",
+        "403 Forbidden",
+        "404 Not Found",
+        "407 Proxy Authentication Required"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "servicios_web"
+    },
+    {
+      "id": 113,
+      "pregunta": "¿Qué problema presenta el siguiente código de serialización?",
+      "codigo": "class User implements Serializable {\n  private String name;\n  private transient Password password;\n  private void writeObject(ObjectOutputStream out) throws IOException {\n    out.defaultWriteObject();\n    out.writeObject(password);\n  }\n}",
+      "opciones": [
+        "No se puede serializar un objeto transient",
+        "Falta el método readObject correspondiente",
+        "defaultWriteObject() no puede usarse con campos transient",
+        "writeObject debe ser público"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "serializacion"
+    },
+    {
+      "id": 114,
+      "pregunta": "¿Qué método de SSLSocket permite verificar si el handshake SSL ha sido completado?",
+      "opciones": [
+        "isHandshakeComplete()",
+        "isConnected()",
+        "isSecure()",
+        "isHandshakeDone()"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "seguridad"
+    },
+    {
+      "id": 115,
+      "pregunta": "¿Qué error hay en el siguiente código de un cliente UDP?",
+      "codigo": "DatagramSocket socket = new DatagramSocket();\nbyte[] buffer = \"Hello\".getBytes();\nDatagramPacket packet = new DatagramPacket(buffer, buffer.length, InetAddress.getByName(\"localhost\"), 9090);\nsocket.send(packet);\npacket = new DatagramPacket(buffer, buffer.length);\nsocket.receive(packet);",
+      "opciones": [
+        "No se puede reutilizar el mismo buffer",
+        "No se puede reutilizar el mismo DatagramPacket",
+        "receive() necesita la dirección del servidor",
+        "El buffer es demasiado pequeño para receive"
+      ],
+      "respuesta_correcta": 3,
+      "categoria": "sockets_udp"
+    },
+    {
+      "id": 116,
+      "pregunta": "En JAX-RS, ¿qué anotación se usa para especificar que un método responde a peticiones GET?",
+      "opciones": [
+        "@GET",
+        "@HttpGet",
+        "@GetMapping",
+        "@RequestGet"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "servicios_web"
+    },
+    {
+      "id": 117,
+      "pregunta": "¿Qué problema presenta el siguiente código de manejo de threads?",
+      "codigo": "class Counter {\n  private int count = 0;\n  public synchronized void increment() { count++; }\n  public int getCount() { return count; }\n}",
+      "opciones": [
+        "increment() no necesita ser synchronized",
+        "getCount() debería ser synchronized",
+        "count debería ser volatile",
+        "No se puede sincronizar métodos de acceso"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "concurrencia"
+    },
+    {
+      "id": 118,
+      "pregunta": "En JAXB, ¿qué anotación se usa para especificar un adaptador XML personalizado?",
+      "opciones": [
+        "@XmlAdapter",
+        "@XmlCustom",
+        "@XmlJavaType",
+        "@Adapter"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "xml"
+    },
+    {
+      "id": 119,
+      "pregunta": "¿Qué error hay en el siguiente código de un servidor TCP?",
+      "codigo": "try(ServerSocket server = new ServerSocket(8080)) {\n  while(true) {\n    try(Socket client = server.accept()) {\n      handleClient(client);\n    }\n  }\n}",
+      "opciones": [
+        "No se puede usar try-with-resources con ServerSocket",
+        "El servidor se cerrará después de cada cliente",
+        "accept() no puede estar en un try-with-resources",
+        "handleClient() debería estar en un try separado"
+      ],
+      "respuesta_correcta": 3,
+      "categoria": "sockets_tcp"
+    },
+    {
+      "id": 120,
+      "pregunta": "En SSL, ¿qué interfaz define los métodos para un administrador de confianza?",
+      "opciones": [
+        "TrustManager",
+        "TrustHandler",
+        "TrustController",
+        "TrustAdmin"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "seguridad"
+    },
+    {
+      "id": 121,
+      "pregunta": "¿Qué error hay en el siguiente código de un cliente TCP?",
+      "codigo": "Socket socket = new Socket(\"localhost\", 8080);\nOutputStream out = socket.getOutputStream();\nout.write(\"Hello\".getBytes());\nsocket.close();",
+      "opciones": [
+        "Falta flush() después de write()",
+        "No se puede usar getOutputStream() en un cliente",
+        "El constructor de Socket puede lanzar una excepción",
+        "localhost no es una dirección válida"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "sockets_tcp"
+    },
+    {
+      "id": 122,
+      "pregunta": "En REST, ¿qué código de estado HTTP indica que el cliente debe autenticarse para obtener la respuesta solicitada?",
+      "opciones": [
+        "401 Unauthorized",
+        "403 Forbidden",
+        "404 Not Found",
+        "407 Proxy Authentication Required"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "servicios_web"
+    },
+    {
+      "id": 123,
+      "pregunta": "¿Qué problema presenta el siguiente código de serialización?",
+      "codigo": "class User implements Serializable {\n  private String name;\n  private transient Password password;\n  private void writeObject(ObjectOutputStream out) throws IOException {\n    out.defaultWriteObject();\n    out.writeObject(password);\n  }\n}",
+      "opciones": [
+        "No se puede serializar un objeto transient",
+        "Falta el método readObject correspondiente",
+        "defaultWriteObject() no puede usarse con campos transient",
+        "writeObject debe ser público"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "serializacion"
+    },
+    {
+      "id": 124,
+      "pregunta": "¿Qué método de SSLSocket permite verificar si el handshake SSL ha sido completado?",
+      "opciones": [
+        "isHandshakeComplete()",
+        "isConnected()",
+        "isSecure()",
+        "isHandshakeDone()"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "seguridad"
+    },
+    {
+      "id": 125,
+      "pregunta": "¿Qué error hay en el siguiente código de un cliente UDP?",
+      "codigo": "DatagramSocket socket = new DatagramSocket();\nbyte[] buffer = \"Hello\".getBytes();\nDatagramPacket packet = new DatagramPacket(buffer, buffer.length, InetAddress.getByName(\"localhost\"), 9090);\nsocket.send(packet);\npacket = new DatagramPacket(buffer, buffer.length);\nsocket.receive(packet);",
+      "opciones": [
+        "No se puede reutilizar el mismo buffer",
+        "No se puede reutilizar el mismo DatagramPacket",
+        "receive() necesita la dirección del servidor",
+        "El buffer es demasiado pequeño para receive"
+      ],
+      "respuesta_correcta": 3,
+      "categoria": "sockets_udp"
+    },
+    {
+      "id": 126,
+      "pregunta": "En JAX-RS, ¿qué anotación se usa para especificar que un método responde a peticiones GET?",
+      "opciones": [
+        "@GET",
+        "@HttpGet",
+        "@GetMapping",
+        "@RequestGet"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "servicios_web"
+    },
+    {
+      "id": 127,
+      "pregunta": "¿Qué problema presenta el siguiente código de manejo de threads?",
+      "codigo": "class Counter {\n  private int count = 0;\n  public synchronized void increment() { count++; }\n  public int getCount() { return count; }\n}",
+      "opciones": [
+        "increment() no necesita ser synchronized",
+        "getCount() debería ser synchronized",
+        "count debería ser volatile",
+        "No se puede sincronizar métodos de acceso"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "concurrencia"
+    },
+    {
+      "id": 128,
+      "pregunta": "En JAXB, ¿qué anotación se usa para especificar un adaptador XML personalizado?",
+      "opciones": [
+        "@XmlAdapter",
+        "@XmlCustom",
+        "@XmlJavaType",
+        "@Adapter"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "xml"
+    },
+    {
+      "id": 129,
+      "pregunta": "¿Qué error hay en el siguiente código de un servidor TCP?",
+      "codigo": "try(ServerSocket server = new ServerSocket(8080)) {\n  while(true) {\n    try(Socket client = server.accept()) {\n      handleClient(client);\n    }\n  }\n}",
+      "opciones": [
+        "No se puede usar try-with-resources con ServerSocket",
+        "El servidor se cerrará después de cada cliente",
+        "accept() no puede estar en un try-with-resources",
+        "handleClient() debería estar en un try separado"
+      ],
+      "respuesta_correcta": 3,
+      "categoria": "sockets_tcp"
+    },
+    {
+      "id": 130,
+      "pregunta": "En SSL, ¿qué interfaz define los métodos para un administrador de confianza?",
+      "opciones": [
+        "TrustManager",
+        "TrustHandler",
+        "TrustController",
+        "TrustAdmin"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "seguridad"
+    },
+    {
+      "id": 131,
+      "pregunta": "¿Qué error hay en el siguiente código de un cliente TCP?",
+      "codigo": "Socket socket = new Socket(\"localhost\", 8080);\nOutputStream out = socket.getOutputStream();\nout.write(\"Hello\".getBytes());\nsocket.close();",
+      "opciones": [
+        "Falta flush() después de write()",
+        "No se puede usar getOutputStream() en un cliente",
+        "El constructor de Socket puede lanzar una excepción",
+        "localhost no es una dirección válida"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "sockets_tcp"
+    },
+    {
+      "id": 132,
+      "pregunta": "En REST, ¿qué código de estado HTTP indica que el cliente debe autenticarse para obtener la respuesta solicitada?",
+      "opciones": [
+        "401 Unauthorized",
+        "403 Forbidden",
+        "404 Not Found",
+        "407 Proxy Authentication Required"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "servicios_web"
+    },
+    {
+      "id": 133,
+      "pregunta": "¿Qué problema presenta el siguiente código de serialización?",
+      "codigo": "class User implements Serializable {\n  private String name;\n  private transient Password password;\n  private void writeObject(ObjectOutputStream out) throws IOException {\n    out.defaultWriteObject();\n    out.writeObject(password);\n  }\n}",
+      "opciones": [
+        "No se puede serializar un objeto transient",
+        "Falta el método readObject correspondiente",
+        "defaultWriteObject() no puede usarse con campos transient",
+        "writeObject debe ser público"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "serializacion"
+    },
+    {
+      "id": 134,
+      "pregunta": "¿Qué método de SSLSocket permite verificar si el handshake SSL ha sido completado?",
+      "opciones": [
+        "isHandshakeComplete()",
+        "isConnected()",
+        "isSecure()",
+        "isHandshakeDone()"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "seguridad"
+    },
+    {
+      "id": 135,
+      "pregunta": "¿Qué error hay en el siguiente código de un cliente UDP?",
+      "codigo": "DatagramSocket socket = new DatagramSocket();\nbyte[] buffer = \"Hello\".getBytes();\nDatagramPacket packet = new DatagramPacket(buffer, buffer.length, InetAddress.getByName(\"localhost\"), 9090);\nsocket.send(packet);\npacket = new DatagramPacket(buffer, buffer.length);\nsocket.receive(packet);",
+      "opciones": [
+        "No se puede reutilizar el mismo buffer",
+        "No se puede reutilizar el mismo DatagramPacket",
+        "receive() necesita la dirección del servidor",
+        "El buffer es demasiado pequeño para receive"
+      ],
+      "respuesta_correcta": 3,
+      "categoria": "sockets_udp"
+    },
+    {
+      "id": 136,
+      "pregunta": "En JAX-RS, ¿qué anotación se usa para especificar que un método responde a peticiones GET?",
+      "opciones": [
+        "@GET",
+        "@HttpGet",
+        "@GetMapping",
+        "@RequestGet"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "servicios_web"
+    },
+    {
+      "id": 137,
+      "pregunta": "¿Qué problema presenta el siguiente código de manejo de threads?",
+      "codigo": "class Counter {\n  private int count = 0;\n  public synchronized void increment() { count++; }\n  public int getCount() { return count; }\n}",
+      "opciones": [
+        "increment() no necesita ser synchronized",
+        "getCount() debería ser synchronized",
+        "count debería ser volatile",
+        "No se puede sincronizar métodos de acceso"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "concurrencia"
+    },
+    {
+      "id": 138,
+      "pregunta": "En JAXB, ¿qué anotación se usa para especificar un adaptador XML personalizado?",
+      "opciones": [
+        "@XmlAdapter",
+        "@XmlCustom",
+        "@XmlJavaType",
+        "@Adapter"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "xml"
+    },
+    {
+      "id": 139,
+      "pregunta": "¿Qué error hay en el siguiente código de un servidor TCP?",
+      "codigo": "try(ServerSocket server = new ServerSocket(8080)) {\n  while(true) {\n    try(Socket client = server.accept()) {\n      handleClient(client);\n    }\n  }\n}",
+      "opciones": [
+        "No se puede usar try-with-resources con ServerSocket",
+        "El servidor se cerrará después de cada cliente",
+        "accept() no puede estar en un try-with-resources",
+        "handleClient() debería estar en un try separado"
+      ],
+      "respuesta_correcta": 3,
+      "categoria": "sockets_tcp"
+    },
+    {
+      "id": 140,
+      "pregunta": "En SSL, ¿qué interfaz define los métodos para un administrador de confianza?",
+      "opciones": [
+        "TrustManager",
+        "TrustHandler",
+        "TrustController",
+        "TrustAdmin"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "seguridad"
+    },
+    {
+      "id": 141,
+      "pregunta": "¿Qué error hay en el siguiente código de un cliente TCP?",
+      "codigo": "Socket socket = new Socket(\"localhost\", 8080);\nOutputStream out = socket.getOutputStream();\nout.write(\"Hello\".getBytes());\nsocket.close();",
+      "opciones": [
+        "Falta flush() después de write()",
+        "No se puede usar getOutputStream() en un cliente",
+        "El constructor de Socket puede lanzar una excepción",
+        "localhost no es una dirección válida"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "sockets_tcp"
+    },
+    {
+      "id": 142,
+      "pregunta": "En REST, ¿qué código de estado HTTP indica que el cliente debe autenticarse para obtener la respuesta solicitada?",
+      "opciones": [
+        "401 Unauthorized",
+        "403 Forbidden",
+        "404 Not Found",
+        "407 Proxy Authentication Required"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "servicios_web"
+    },
+    {
+      "id": 143,
+      "pregunta": "¿Qué problema presenta el siguiente código de serialización?",
+      "codigo": "class User implements Serializable {\n  private String name;\n  private transient Password password;\n  private void writeObject(ObjectOutputStream out) throws IOException {\n    out.defaultWriteObject();\n    out.writeObject(password);\n  }\n}",
+      "opciones": [
+        "No se puede serializar un objeto transient",
+        "Falta el método readObject correspondiente",
+        "defaultWriteObject() no puede usarse con campos transient",
+        "writeObject debe ser público"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "serializacion"
+    },
+    {
+      "id": 144,
+      "pregunta": "¿Qué método de SSLSocket permite verificar si el handshake SSL ha sido completado?",
+      "opciones": [
+        "isHandshakeComplete()",
+        "isConnected()",
+        "isSecure()",
+        "isHandshakeDone()"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "seguridad"
+    },
+    {
+      "id": 145,
+      "pregunta": "¿Qué error hay en el siguiente código de un cliente UDP?",
+      "codigo": "DatagramSocket socket = new DatagramSocket();\nbyte[] buffer = \"Hello\".getBytes();\nDatagramPacket packet = new DatagramPacket(buffer, buffer.length, InetAddress.getByName(\"localhost\"), 9090);\nsocket.send(packet);\npacket = new DatagramPacket(buffer, buffer.length);\nsocket.receive(packet);",
+      "opciones": [
+        "No se puede reutilizar el mismo buffer",
+        "No se puede reutilizar el mismo DatagramPacket",
+        "receive() necesita la dirección del servidor",
+        "El buffer es demasiado pequeño para receive"
+      ],
+      "respuesta_correcta": 3,
+      "categoria": "sockets_udp"
+    },
+    {
+      "id": 146,
+      "pregunta": "En JAX-RS, ¿qué anotación se usa para especificar que un método responde a peticiones GET?",
+      "opciones": [
+        "@GET",
+        "@HttpGet",
+        "@GetMapping",
+        "@RequestGet"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "servicios_web"
+    },
+    {
+      "id": 147,
+      "pregunta": "¿Qué problema presenta el siguiente código de manejo de threads?",
+      "codigo": "class Counter {\n  private int count = 0;\n  public synchronized void increment() { count++; }\n  public int getCount() { return count; }\n}",
+      "opciones": [
+        "increment() no necesita ser synchronized",
+        "getCount() debería ser synchronized",
+        "count debería ser volatile",
+        "No se puede sincronizar métodos de acceso"
+      ],
+      "respuesta_correcta": 1,
+      "categoria": "concurrencia"
+    },
+    {
+      "id": 148,
+      "pregunta": "En JAXB, ¿qué anotación se usa para especificar un adaptador XML personalizado?",
+      "opciones": [
+        "@XmlAdapter",
+        "@XmlCustom",
+        "@XmlJavaType",
+        "@Adapter"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "xml"
+    },
+    {
+      "id": 149,
+      "pregunta": "¿Qué error hay en el siguiente código de un servidor TCP?",
+      "codigo": "try(ServerSocket server = new ServerSocket(8080)) {\n  while(true) {\n    try(Socket client = server.accept()) {\n      handleClient(client);\n    }\n  }\n}",
+      "opciones": [
+        "No se puede usar try-with-resources con ServerSocket",
+        "El servidor se cerrará después de cada cliente",
+        "accept() no puede estar en un try-with-resources",
+        "handleClient() debería estar en un try separado"
+      ],
+      "respuesta_correcta": 3,
+      "categoria": "sockets_tcp"
+    },
+    {
+      "id": 150,
+      "pregunta": "En SSL, ¿qué interfaz define los métodos para un administrador de confianza?",
+      "opciones": [
+        "TrustManager",
+        "TrustHandler",
+        "TrustController",
+        "TrustAdmin"
+      ],
+      "respuesta_correcta": 0,
+      "categoria": "seguridad"
+    }
+   
+  ]
+}

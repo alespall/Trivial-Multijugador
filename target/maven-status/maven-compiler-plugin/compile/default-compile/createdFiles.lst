@@ -1,0 +1,9 @@
+SERVIDOR\JugadorPartida.class
+SERVIDOR\ControladorCliente.class
+SERVIDOR\ServidorTrivial.class
+SERVIDOR\EstadoPartida.class
+Cliente\Cliente.class
+SERVIDOR\GestorPartidas.class
+SERVIDOR\GestorPreguntas.class
+SERVIDOR\Pregunta.class
+SERVIDOR\Partida.class
